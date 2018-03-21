@@ -20,6 +20,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.org/sudo/ontology/sudo.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/MFOMD.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-01-09/eco.owl"/>
     </owl:Ontology>
     
@@ -45,6 +46,14 @@
     <!-- http://purl.obolibrary.org/obo/ECO_9000001 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ECO_9000001"/>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#has_side_effect -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#has_side_effect">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has side effect</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -277,6 +286,19 @@
     <!-- http://purl.obolibrary.org/obo/OGMS_0000090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000090"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/behavior.owl/NBO_0002986 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/behavior.owl/NBO_0002986">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_11206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
@@ -597,6 +619,25 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#discussion_of_HCV_testing_and_treatment_barriers">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>discussion of HCV testing and treatment barriers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#inflamed_liver -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#inflamed_liver">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000078"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflamed liver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#inflammatory_process_in_liver -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#inflammatory_process_in_liver">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000095"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflammatory process in liver</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflammatory process in liver</rdfs:label>
     </owl:Class>
     
 
@@ -1178,6 +1219,18 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Methadone">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_11206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/behavior.owl/NBO_0002986"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2872,6 +2925,12 @@ Despite recent emphasis on integrating empirically validated treatment into clin
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#inflammatory_process_in_liver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2885,12 +2944,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Liver"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2928,6 +2981,7 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#Suboxone -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Suboxone">
+        <owl:equivalentClass rdf:resource="http://purl.url/sudo/ontology#Buprenorphine/Naloxone"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
     </owl:Class>
     
@@ -3478,6 +3532,28 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Buprenorphine/Naloxone">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_side_effect"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#inflamed_liver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_11206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the nature of of the relationship &quot;has side effect&quot;?
+
+It should relate continuants to continuants. 
+The concept &quot;hepatitis&quot; refers to both the state of an inflamed liver and the process of inflammation. 
+
+One way to resolve this with natural language is to use 
+1. Inflammatory process in liver 
+2. Inflammatory state of liver
+
+This is only partially complete because the liver is not a point. It, certainly, matters whether a few hepatocytes or 90% are inflamed. (I should also be clearer on hepatitis vs cirrhosis. Is the distinction one of time?)</rdfs:comment>
     </owl:Class>
     
 
