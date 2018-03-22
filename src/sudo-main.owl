@@ -669,6 +669,42 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#buprenorphine_and_naloxone_associated_with_fewer_urine-free_specimens_than_clonidine -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#buprenorphine_and_naloxone_associated_with_fewer_urine-free_specimens_than_clonidine">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Clonidine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Count_of_drug-free_specimens"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Buprenorphine/Naloxone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buprenorphine and naloxone associated with fewer urine-free specimens than clonidine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#change_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#change_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">change in frequency of substance use</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#counseling -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling">
@@ -698,6 +734,24 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#death">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#decrease_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#decrease_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#change_in_substance_use"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decrease in substance use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#design_of_clinical_trial -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#design_of_clinical_trial">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">design of clinical trial</rdfs:label>
     </owl:Class>
     
 
@@ -787,6 +841,24 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#improved_retention -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#improved_retention">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">improved retention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#increase_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#increase_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#change_in_substance_use"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increase in substance use</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#individual_psychotherapy -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#individual_psychotherapy">
@@ -814,10 +886,28 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#methamphetamine_dependence -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#methamphetamine_dependence">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_9974"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methamphetamine dependence</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#mixed-gender -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#mixed-gender">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#no_change_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#no_change_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#change_in_substance_use"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no change in substance use</rdfs:label>
     </owl:Class>
     
 
@@ -872,6 +962,33 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#referral_to_treatment">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>referral to treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#self-reported_decrease_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#self-reported_decrease_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#decrease_in_substance_use"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">self-reported decrease in substance use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#self-reported_increase_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#self-reported_increase_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#increase_in_substance_use"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">self-reported increase in substance use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#self-reported_no_change_in_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#self-reported_no_change_in_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#decrease_in_substance_use"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">self-reported no change in substance use</rdfs:label>
     </owl:Class>
     
 
@@ -1165,21 +1282,14 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
-    <!-- http://purl.url/sudo/ontology#Contingency_Management -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#Contingency_Management">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency Management</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.url/sudo/ontology#Contingency_management_interventions -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Contingency_management_interventions">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency management intervention</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency management intervention</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling"/>
+        <rdfs:label>
+            <rdf:Description/>
+        </rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contingency management</rdfs:label>
     </owl:Class>
     
 
@@ -1205,7 +1315,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Count_of_drug-free_specimens">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Count of drug-free specimens</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of drug-free specimens</rdfs:label>
     </owl:Class>
     
 
@@ -1214,7 +1324,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Count_of_opioid-free_urine_specimens">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Count_of_drug-free_specimens"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Count of opioid-free urine specimens</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of opioid-free urine specimens</rdfs:label>
     </owl:Class>
     
 
@@ -1223,7 +1333,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Craving_rating">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craving rating</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">craving rating</rdfs:label>
     </owl:Class>
     
 
@@ -1273,8 +1383,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#Effectiveness_Trial -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Effectiveness_Trial">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effectiveness Trial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#design_of_clinical_trial"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effectiveness trial</rdfs:label>
     </owl:Class>
     
 
@@ -1453,7 +1563,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Alcohol"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Contingency_Management"/>
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Contingency_management_interventions"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Motivational_Incentives"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Motivational_Interviewing"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Retention_in_Treatment"/>
@@ -1706,18 +1816,17 @@ Planning: involves the client making a commitment to change, and together with t
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_intervention"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#standard_couseling"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_intervention"/>
                 <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#administration_of_clonidine"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#administration_of_suboxone"/>
-                        </owl:unionOf>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#standard_couseling"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#administration_of_clonidine"/>
+                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#administration_of_suboxone"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -1725,18 +1834,13 @@ Planning: involves the client making a commitment to change, and together with t
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
                 <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#seeking_treatment"/>
-                        </owl:unionOf>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
+                            <rdf:Description rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_seeking_treatment_for_opioid_addiction"/>
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#outpatient"/>
+                        </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -1769,6 +1873,12 @@ Planning: involves the client making a commitment to change, and together with t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Suboxone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#&apos;has_conclusion&apos;"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#buprenorphine_and_naloxone_associated_with_fewer_urine-free_specimens_than_clonidine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1813,7 +1923,7 @@ Planning: involves the client making a commitment to change, and together with t
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Retention_in_Treatment">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retention in Treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retention in treatment</rdfs:label>
     </owl:Class>
     
 
@@ -2237,26 +2347,57 @@ Planning: involves the client making a commitment to change, and together with t
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_intervention"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#monetary_prizes"/>
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#standard_couseling"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#outpatient"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#user_of_cocaine"/>
+                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#user_of_methamphetamine"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_9975"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MFOMD_0000046"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#methamphetamine_dependence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Alcohol"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Contingency_Management"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2273,21 +2414,8 @@ Planning: involves the client making a commitment to change, and together with t
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Stimulant_Abuse"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#&apos;has_conclusion&apos;"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Suboxone"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#outpatient"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#no_change_in_substance_use"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2305,39 +2433,8 @@ Planning: involves the client making a commitment to change, and together with t
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_intervention"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#monetary_prizes"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#standard_couseling"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#lives_in_community"/>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#user_of_cocaine"/>
-                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#user_of_methamphetamine"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#report_on_activities_from"/>
-                <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-003"/>
+                <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-006"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the Primary Outcomes Article for CTN-0006. Contingency management interventions that provide tangible incentives based on objective indicators of drug abstinence are efficacious in improving outcomes in substance abusers, but these treatments have rarely been implemented in community-based settings. The objective of this study was to evaluate the efficacy of an abstinence-based contingency management intervention as an addition to usual care in community treatment settings. A total of 415 cocaine or methamphetamine users beginning outpatient substance abuse treatment were randomly assigned to usual care or usual care plus abstinence-based incentives for 12 weeks. All participants received standard care, and those assigned to the abstinence-based incentive condition also earned chances to win prizes for submitting substance-free urine samples; the chances of winning prizes increased with continuous time abstinent. Participants assigned to the abstinence-based incentive condition remained in treatment for a mean +/- SD of 8.0 +/- 4.2 weeks and attended a mean +/- SD of 19.2 +/- 16.8 counseling sessions compared with 6.9 +/- 4.4 weeks and 15.7 +/- 14.4 sessions for those assigned to the usual care condition (P.02 for all). Participants in the abstinence-based incentive condition also submitted significantly more stimulant- and alcohol-free samples (P.001). The abstinence-based incentive group was significantly more likely to achieve 4, 8, and 12 weeks of continuous abstinence than the control group, with odds ratios of 2.5, 2.7, and 4.5, respectively. However, the percentage of positive samples submitted was low overall and did not differ between conditions.</rdfs:comment>
@@ -3023,16 +3120,11 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence"/>
+                            <rdf:Description rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
+                            <rdf:Description rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_seeking_treatment_for_opioid_addiction"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#outpatient"/>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -3041,26 +3133,38 @@ The number of patients younger than 18 years was too small to analyze separately
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Behavioral_Therapy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Motivational_Interviewing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Retention_in_Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#&apos;has_conclusion&apos;"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#improved_retention"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#&apos;has_conclusion&apos;"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#no_change_in_substance_use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#report_on_activities_from"/>
                 <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#Behavioral_Therapy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#Motivational_Interviewing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#Retention_in_Treatment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the Primary Outcomes Article for CTN-0005. 
@@ -3259,7 +3363,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Withdrawal_rating">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Withdrawal rating</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">withdrawal rating</rdfs:label>
     </owl:Class>
     
 
@@ -3383,7 +3487,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#days_of_adherence_to_treatment">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of days of adherence to treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of days of adherence to treatment</rdfs:label>
     </owl:Class>
     
 
@@ -3500,6 +3604,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#outpatient">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An outpatient is a type of patient who recieves medical care but is not hospitalized.</obo:def>
     </owl:Class>
     
 
@@ -3625,7 +3730,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#&apos;Count_of_amphetamine-free_urine_specimens&apos;">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Count_of_drug-free_specimens"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Count of amphetamine-free urine samples</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of amphetamine-free urine samples</rdfs:label>
     </owl:Class>
     
 
@@ -3634,7 +3739,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#&apos;Count_of_cocaine-free_urine_samples&apos;">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Count_of_drug-free_specimens"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Count of cocaine-free urine samples&apos;</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of cocaine-free urine samples</rdfs:label>
     </owl:Class>
     
 

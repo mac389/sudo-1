@@ -12,6 +12,7 @@ Convert HTML records to XML
  Use XML records as database rather than building intermediate layer. 
  -Can see how to use ontologies via XML. 
 
+Numbers are study numbers, not CTN numbers. 
 | Mike 	| Karun 	| MC Edit Karun	|
 |------	|-------	|------	|
 | 54 	| ~~10~~ 	| 10 	| 
@@ -28,3 +29,6 @@ Convert HTML records to XML
 | 29 	| ~~20~~ 	| 20 	|
 | 18 	| ~~35~~ 	| 35 	|
 | 19 	|  	|  	|
+| 5 | |
+| 89 | | 
+| 87 | | 
