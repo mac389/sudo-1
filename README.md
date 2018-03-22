@@ -12,13 +12,13 @@ Convert HTML records to XML
  Use XML records as database rather than building intermediate layer. 
  -Can see how to use ontologies via XML. 
 
-| Mike 	| Karun 	| Redo	|
+| Mike 	| Karun 	| MC Edit Karun	|
 |------	|-------	|------	|
 | 54 	| ~~10~~ 	| 10 	| 
 | 13 	| ~~17~~ 	| 17 	|
 | 46 	| ~~21~~ 	| 21 	|
 | 14 	| ~~11~~ 	| 11 	|
-| 30 	| ~~27~~ 	| 27 	|
+| 30 	| ~~27~~ 	| ~~27~~|
 | 15 	| ~~32~~ 	| 32 	|
 | 12 	| ~~47~~ 	| 47 	|
 | 52 	| ~~28~~ 	| 28 	|

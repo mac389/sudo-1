@@ -630,6 +630,45 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#buprenorphine_and_methadone_show_comparable_patterns_of_transaminase_levels -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#buprenorphine_and_methadone_show_comparable_patterns_of_transaminase_levels">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2044"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#equivalence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Methadone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#transaminase_levels"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Buprenorphine/Naloxone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buprenorphine and methadone show comparable patterns of transaminase levels</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#counseling -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling">
@@ -641,6 +680,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.org/sudo/ontology/sudo.owl#counseling_and_detoxification -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling_and_detoxification">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#detoxification"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -674,6 +715,23 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#discussion_of_HCV_testing_and_treatment_barriers">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>discussion of HCV testing and treatment barriers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#equivalence -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#equivalence">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#group_psychotherapy -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#group_psychotherapy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#psychotherapy"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">group psychotherapy</rdfs:label>
     </owl:Class>
     
 
@@ -729,6 +787,15 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#individual_psychotherapy -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#individual_psychotherapy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#psychotherapy"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual psychotherapy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#inflamed_liver -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#inflamed_liver">
@@ -760,6 +827,24 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#patient_navigation_intervention">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>patient navigation intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#prescription_opioid_dependence -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#prescription_opioid_dependence">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prescription opioid dependence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#psychotherapy -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#psychotherapy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling"/>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">psychotherapy is a type of medical therapy that involves verbal communication between a healthcare provider and patient</obo:def>
     </owl:Class>
     
 
@@ -880,8 +965,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#Behavioral_Therapy -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Behavioral_Therapy">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behavioral Therapy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#psychotherapy"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">behavioral therapy</rdfs:label>
     </owl:Class>
     
 
@@ -1386,8 +1471,19 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#Motivational_Interviewing -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Motivational_Interviewing">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motivational Interviewing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#psychotherapy"/>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motivational interviewing is a type of psychotherapy that involves four patterns of interaction between the healthcare provider and patient:
+
+1. engaging
+2. focusing
+3. evoking
+4. planning 
+
+Engaging: the process of establishing a working relationship based on trust and respect. The client should be doing most of the talking, as the counselor utilizes the skill of reflective listening throughout the process. Both the client and counselor make an agreement on treatment goals and on collaborate the tasks that will help the client reach those goals.
+Focusing: the ongoing process of seeking and maintaining direction.[12]
+Evoking: eliciting the client&apos;s own motivations for change, while evoking hope and confidence.
+Planning: involves the client making a commitment to change, and together with the counselor, developing a specific plan of action.</obo:def>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motivational interviewing</rdfs:label>
     </owl:Class>
     
 
@@ -2995,7 +3091,13 @@ Despite recent emphasis on integrating empirically validated treatment into clin
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_measurement"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002910"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#transaminase_levels"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_outcome"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#buprenorphine_and_methadone_show_comparable_patterns_of_transaminase_levels"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3008,12 +3110,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3044,12 +3140,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Buprenorphine/Naloxone"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#&apos;has_conclusion&apos;"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Buprenorphine_is_first_line_treatment,_methadone_is_secondary"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
