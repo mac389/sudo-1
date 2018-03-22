@@ -22,6 +22,7 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/MFOMD.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/eco/releases/2018-01-09/eco.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2018-03-02/doid.owl"/>
     </owl:Ontology>
     
 
@@ -49,10 +50,27 @@
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#has_diagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#has_diagnosis">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has diagnosis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#has_side_effect -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#has_side_effect">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has side effect</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#is_preferred_treatment_for -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#is_preferred_treatment_for">
+        <rdfs:subPropertyOf rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is preferred treatment for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -569,6 +587,12 @@ Of 801 patients randomized, 261 (32.6%) were women (mean [SD] age, 44.6 years [1
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Cigarettes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#report_on_activities_from"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#CTN-059"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>This is the Primary Outcomes Article for CTN-0059. Substance use, a leading cause of illness and death, is underidentified in medical practice. The Tobacco, Alcohol, Prescription Medication, and Other Substance Use (TAPS) tool was developed to address the need for a brief screening and assessment instrument that includes all commonly used substances and fits into clinical workflows. The goal of this multisite study conducted within the NIDA Clinical Trials Network, CTN-0059, was to assess the performance of the TAPS tool in primary care patients by comparing it with a reference standard measure, the modified World Mental Health Composite International Diagnostic Interview (CIDI), which measures problem use and substance use disorder (SUD).
 
 The study was conducted at 5 adult primary care clinics with 2000 adult patients consecutively recruited from clinic waiting areas. Results found that interviewer- and self-administered versions of the TAPS tool had similar diagnostic characteristics. For identifying problem use (at a cutoff of 1+), the TAPS tool had a sensitivity of 0.93 (95%CI, 0.90 to 0.95) and specificity of 0.87 (CI, 0.85 to 0.89) for tobacco and a sensitivity of 0.74 (CI, 0.70 to 0.78) and specificity of 0.79 (CI, 0.76 to 0.81) for alcohol. For problem use of illicit and prescription drugs, sensitivity ranged from 0.82 (CI, 0.76 to 0.87) for marijuana to 0.63 (CI, 0.47 to 0.78) for sedatives; specificity was 0.93 or higher. For identifying any SUD (at a cutoff of 2+), sensitivity was lower.
@@ -606,10 +630,41 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#counseling -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#counseling_and_detoxification -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling_and_detoxification">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#is_preferred_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling and detoxification</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#death -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#death">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#detoxification -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#detoxification">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
     </owl:Class>
     
 
@@ -623,6 +678,48 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_diagnosis"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being addicted to opioids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids_with_hepatitis_C -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids_with_hepatitis_C">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being addicted to opioids with hepatitis C</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_with_hepatitis_B -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_with_hepatitis_B">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being with hepatitis B</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_with_hepatitis_C -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_with_hepatitis_C">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being with hepatitis C</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#inflamed_liver -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#inflamed_liver">
@@ -632,12 +729,11 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
-    <!-- http://purl.org/sudo/ontology/sudo.owl#inflammatory_process_in_liver -->
+    <!-- http://purl.org/sudo/ontology/sudo.owl#medication_assisted_therapy -->
 
-    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#inflammatory_process_in_liver">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000095"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflammatory process in liver</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflammatory process in liver</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#medication_assisted_therapy">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medication assisted therapy</rdfs:label>
     </owl:Class>
     
 
@@ -682,6 +778,24 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#referral_to_treatment">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>referral to treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#treatment_for_opioid_addiction -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#treatment_for_opioid_addiction">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000090"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment for opioid addiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#treatment_for_opioid_addiction_in_youths -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#treatment_for_opioid_addiction_in_youths">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#treatment_for_opioid_addiction"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment for opioid addiction in youths</rdfs:label>
     </owl:Class>
     
 
@@ -919,7 +1033,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Community_health_services">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Community Health Service</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">community health service</rdfs:label>
     </owl:Class>
     
 
@@ -1052,15 +1166,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_SUD">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
         <rdfs:label>DSM-IV Diagnosis of SUD</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.url/sudo/ontology#Dependence_on_Opioids -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#Dependence_on_Opioids">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dependence on Opioids</rdfs:label>
     </owl:Class>
     
 
@@ -1534,13 +1639,13 @@ Limitations of this study included the low prevalence of some drug classes, lead
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Clonidine"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Clonidine"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1737,6 +1842,12 @@ Limitations of this study included the low prevalence of some drug classes, lead
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Behavioral_Therapy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1744,12 +1855,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Cocaine"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2034,6 +2139,12 @@ Limitations of this study included the low prevalence of some drug classes, lead
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2047,12 +2158,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Contingency_management_interventions"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2195,8 +2300,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_2559"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Community_health_services"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Pharmacologic_Therapy"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Suboxone"/>
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Taper_Schedule"/>
@@ -2300,13 +2405,19 @@ Data were collected at weekly clinic visits through the end of the taper periods
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Stimulant_Abuse"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#medication_assisted_therapy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#treatment_for_opioid_addiction_in_youths"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2327,6 +2438,7 @@ Data were collected at weekly clinic visits through the end of the taper periods
                 <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karun Ellango</obo:created_by>
         <rdfs:comment>This is the Primary Outcomes Article for CTN-0010. The usual treatment for opioid-addicted youth is detoxification and counseling. However, extended medication-assisted therapy may be more helpful. National Drug Abuse Treatment Clinical Trials Network study CTN-0010 evaluated the efficacy of continuing buprenorphine-naloxone for 12 weeks versus detoxification for opioid-addicted youth. The CTN-0010 clinical trial, held at six community treatment programs from July 2003 to December 2006, included 152 patients aged 15 to 21 years who were randomized to 12 weeks of buprenorphine-naloxone or a 14-day taper (detox). Patients in the 12-week buprenorphine/naloxone group were prescribed up to 24 mg per day for 9 weeks and then tapered to week 12; patients in the detox group were prescribed up to 14 mg a day and then tapered to day 14. All were offered weekly individual and group counseling. The main outcome measure was opioid-positive urine test results at weeks 4, 8, and 12.
 
 The number of patients younger than 18 years was too small to analyze separately, but overall, patients in the detox group had higher proportions of opioid-positive urine test results at weeks 4 and 8 but not at week 12. At week 4, 59 detox patients had positive results versus 58 12-week buprenorphine/naloxone patients. At week 8, 53 detox patients had positive results versus 52 12-week buprenorphine/naloxone patients. At week 12, 53 detox patients had positive results versus 49 12-week buprenorphine/naloxone patients. By week 12, 16 of 78 detox patients (20.5%) remained in treatment vs. 52 of 74 12-week buprenorphine/naloxone patients (70%). During weeks 1 through 12, patients in the 12-week buprenorphine/naloxone group reported less opioid use, less injecting, and less nonstudy addiction treatment. High levels of opioid use occurred in both groups at follow-up. Four of 83 patients who tested negative for hepatitis C at baseline were positive for hepatitis C at week 12.</rdfs:comment>
@@ -2861,12 +2973,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_allocation"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#random"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_comparison"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#transaminase_levels"/>
             </owl:Restriction>
@@ -2905,27 +3011,14 @@ Despite recent emphasis on integrating empirically validated treatment into clin
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#multisite"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#inflammatory_process_in_liver"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012115"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2938,12 +3031,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Community_health_services"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Dependence_on_Opioids"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2962,6 +3049,18 @@ Despite recent emphasis on integrating empirically validated treatment into clin
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Buprenorphine/Naloxone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_allocation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#random"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
