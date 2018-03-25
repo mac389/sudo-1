@@ -12,7 +12,7 @@ Convert HTML records to XML
  Use XML records as database rather than building intermediate layer. 
  -Can see how to use ontologies via XML. 
 
-Numbers are study numbers, not CTN numbers. 
+Numbers are study numbers, not CTN numbers. Except when they refer to CTN numbers.
 | Mike 	| Karun 	| MC Edit Karun	|
 |------	|-------	|------	|
 | 54 	| ~~10~~ 	| 10 	| 

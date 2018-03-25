@@ -339,7 +339,7 @@
     <!-- http://purl.org/sudo/ontology/sudo.owl#Emergency_Department_Patients -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Emergency_Department_Patients">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
         <rdfs:label>Emergency Department Patients</rdfs:label>
     </owl:Class>
     
@@ -348,8 +348,8 @@
     <!-- http://purl.org/sudo/ontology/sudo.owl#HIV_Positive -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#HIV_Positive">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
-        <rdfs:label>HIV Positive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who is HIV seropositive</rdfs:label>
     </owl:Class>
     
 
@@ -377,7 +377,7 @@
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Number_of_positive_hair_samples_for_drug_use">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Measurement"/>
-        <rdfs:label>Number of positive hair samples for drug use</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of hair samples positive for drug use</rdfs:label>
     </owl:Class>
     
 
@@ -485,6 +485,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Motivational_Incentives"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -498,12 +504,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Retention_in_Treatment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#HIV/AIDS"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -572,12 +572,6 @@ Of 801 patients randomized, 261 (32.6%) were women (mean [SD] age, 44.6 years [1
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Opioids"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Alcohol"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -585,6 +579,19 @@ Of 801 patients randomized, 261 (32.6%) were women (mean [SD] age, 44.6 years [1
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Cigarettes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_11206"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DOID_2559"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -625,7 +632,16 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.org/sudo/ontology/sudo.owl#african -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#african">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who has African heritage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#anal_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#anal_intercourse">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anal intercourse</rdfs:label>
     </owl:Class>
     
 
@@ -730,6 +746,63 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#counseling_for_HIV -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling_for_HIV">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling for HIV</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#counseling_for_cessation_of_smoking_cigarettes -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling_for_cessation_of_smoking_cigarettes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling_for_smoking_cigarettes"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling for cessation of smoking cigarettes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#counseling_for_hepatitis_C_virus -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling_for_hepatitis_C_virus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling for hepatitis C virus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#counseling_for_smoking_cigarettes -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#counseling_for_smoking_cigarettes">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling for smoking cigarettes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#count_of_HIV_tests_performed -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#count_of_HIV_tests_performed">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of HIV tests performed</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#death -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#death">
@@ -767,8 +840,17 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.org/sudo/ontology/sudo.owl#discussion_of_HCV_testing_and_treatment_barriers -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#discussion_of_HCV_testing_and_treatment_barriers">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling_for_hepatitis_C_virus"/>
         <rdfs:label>discussion of HCV testing and treatment barriers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#disposition_to_be_unemployed -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#disposition_to_be_unemployed">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disposition to be unemployed</rdfs:label>
     </owl:Class>
     
 
@@ -777,6 +859,42 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#equivalence">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#female_penetrative_intercourse_with_a_biological_female -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#female_penetrative_intercourse_with_a_biological_female">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse_in_female"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female penetrative intercourse with a biological female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#female_penetrative_intercourse_with_a_biological_male -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#female_penetrative_intercourse_with_a_biological_male">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse_in_female"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female penetrative intercourse with a biological male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#female_receptive_intercourse_with_a_biological_female -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#female_receptive_intercourse_with_a_biological_female">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse_in_female"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female receptive intercourse with a biological female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#female_receptive_intercourse_with_a_biological_male -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#female_receptive_intercourse_with_a_biological_male">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse_in_female"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female receptive intercourse with a biological male</rdfs:label>
     </owl:Class>
     
 
@@ -793,14 +911,14 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_depent_on_a_substance"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_diagnosis"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being addicted to opioids</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being dependent on an opioid</rdfs:label>
     </owl:Class>
     
 
@@ -809,7 +927,17 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids_with_hepatitis_C">
         <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being addicted to opioids with hepatitis C</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_with_hepatitis_C"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being dependent on opioids with hepatitis C</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_depent_on_a_substance -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_depent_on_a_substance">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being dependent on a substance</rdfs:label>
     </owl:Class>
     
 
@@ -819,6 +947,15 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_seeking_treatment_for_opioid_addiction">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being seeking treatment for opioid addiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#human_being_who_misuses_a_stimulant -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#human_being_who_misuses_a_stimulant">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#user_of_substance"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who misuses a stimulant</rdfs:label>
     </owl:Class>
     
 
@@ -898,7 +1035,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.org/sudo/ontology/sudo.owl#mixed-gender -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#mixed-gender">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
     </owl:Class>
     
 
@@ -912,11 +1049,82 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#oral_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#oral_intercourse">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oral intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#patient_navigation_intervention -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#patient_navigation_intervention">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>patient navigation intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative anal intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse_with_a_biological_female -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse_with_a_biological_female">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative anal intercourse with a biological female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse_with_a_biological_male -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse_with_a_biological_male">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_anal_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative anal intercourse with a biological male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000548"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse_in_female -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse_in_female">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000549"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative intercourse in female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_oral_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_oral_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative oral intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_vaginal_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_vaginal_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative vaginal intercourse</rdfs:label>
     </owl:Class>
     
 
@@ -939,6 +1147,15 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#rating_scale -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#rating_scale">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Measurement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rating scale</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#receipt_of_informational_pamphlet -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receipt_of_informational_pamphlet">
@@ -953,6 +1170,60 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receipt_of_screening_assignment">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
         <rdfs:label>receipt of screening assignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive anal intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse_with_a_biological_female -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse_with_a_biological_female">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive anal intercourse with a biological female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse_with_a_biological_male -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse_with_a_biological_male">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#receptive_anal_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive anal intercourse with a biological male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000548"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse_in_female -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse_in_female">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000549"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive intercourse in female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_oral_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_oral_intercourse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive oral intercourse</rdfs:label>
     </owl:Class>
     
 
@@ -1011,19 +1282,55 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#vaginal_intercourse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#vaginal_intercourse">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vaginal intercourse</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#Tobacco,_Alcohol,_Prescription_Medication,_and_Other_Substance_Use_(TAPS) -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Tobacco,_Alcohol,_Prescription_Medication,_and_Other_Substance_Use_(TAPS)">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#rating_scale"/>
         <rdfs:label>Tobacco, Alcohol, Prescription Medication, and Other Substance Use (TAPS)</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://purl.url/sudo/ontology#ADHD -->
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse,_female_with_a_biological_female,_with_barrier_protection -->
 
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#ADHD">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse,_female_with_a_biological_female,_with_barrier_protection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#female_penetrative_intercourse_with_a_biological_male"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative intercourse, female with a biological female, with barrier protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse,_female_with_a_biological_female,_without_barrier_protection -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#penetrative_intercourse,_female_with_a_biological_female,_without_barrier_protection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#female_penetrative_intercourse_with_a_biological_male"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetrative intercourse, female with a biological female, without barrier protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse,_female_with_a_biological_female,_with_barrier_protection -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse,_female_with_a_biological_female,_with_barrier_protection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#female_receptive_intercourse_with_a_biological_female"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive intercourse, female with a biological female, with barrier protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse,_female_with_a_biological_female,_without_barrier_protection -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#receptive_intercourse,_female_with_a_biological_female,_without_barrier_protection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#female_receptive_intercourse_with_a_biological_female"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">receptive intercourse, female with a biological female, without barrier protection</rdfs:label>
     </owl:Class>
     
 
@@ -1040,7 +1347,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#After_drug_abuse_treatment -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#After_drug_abuse_treatment">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
         <rdfs:label>After drug abuse treatment</rdfs:label>
     </owl:Class>
     
@@ -1063,7 +1370,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#Allocation_Population -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Allocation_Population">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Population"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Study Arm</rdfs:label>
     </owl:Class>
     
@@ -1350,7 +1656,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_ADHD -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_ADHD">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
         <rdfs:label>DSM-IV Diagnosis of ADHD</rdfs:label>
     </owl:Class>
     
@@ -1359,7 +1665,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSM-IV Diagnosis of Opioid Dependence</rdfs:label>
     </owl:Class>
     
@@ -1368,7 +1674,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_SUD -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_SUD">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
         <rdfs:label>DSM-IV Diagnosis of SUD</rdfs:label>
     </owl:Class>
     
@@ -1385,15 +1691,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Effectiveness_Trial">
         <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#design_of_clinical_trial"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effectiveness trial</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.url/sudo/ontology#Enrollment_Population -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#Enrollment_Population">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Population"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enrollment Population</rdfs:label>
     </owl:Class>
     
 
@@ -1457,8 +1754,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#HIV_Negative -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#HIV_Negative">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
-        <rdfs:label>HIV Negative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who is HIV seronegative</rdfs:label>
     </owl:Class>
     
 
@@ -1466,8 +1763,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#HIV_counseling_with_rapid_on-site_testing -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#HIV_counseling_with_rapid_on-site_testing">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
-        <rdfs:label>HIV counseling with rapid on-site testing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling_for_HIV"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling for HIV with on-site testing</rdfs:label>
     </owl:Class>
     
 
@@ -1657,7 +1954,7 @@ Planning: involves the client making a commitment to change, and together with t
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Number_of_negative_urine_samples">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Measurement"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of positive urine samples</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of urine samples positive for substance</rdfs:label>
     </owl:Class>
     
 
@@ -1698,8 +1995,14 @@ Planning: involves the client making a commitment to change, and together with t
     <!-- http://purl.url/sudo/ontology#Parent_ADHD-RS -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Parent_ADHD-RS">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#rating_scale"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_1094"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Parent ADHD-RS</rdfs:label>
     </owl:Class>
     
@@ -1730,12 +2033,6 @@ Planning: involves the client making a commitment to change, and together with t
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacological Therapy</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.url/sudo/ontology#Population -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#Population"/>
     
 
 
@@ -1781,8 +2078,8 @@ Planning: involves the client making a commitment to change, and together with t
     <!-- http://purl.url/sudo/ontology#Referral_for_off-site_HIV_testing -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Referral_for_off-site_HIV_testing">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
-        <rdfs:label>Referral for off-site HIV testing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling_for_HIV"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling for HIV with referral to off-site HIV testing</rdfs:label>
     </owl:Class>
     
 
@@ -1936,15 +2233,6 @@ Planning: involves the client making a commitment to change, and together with t
     
 
 
-    <!-- http://purl.url/sudo/ontology#Sexual_Risk_Behavior -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#Sexual_Risk_Behavior">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label>Sexual Risk Behavior</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.url/sudo/ontology#Significant_decreases_in_drug_injection_and_risk_behaviors -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Significant_decreases_in_drug_injection_and_risk_behaviors">
@@ -2063,6 +2351,12 @@ Planning: involves the client making a commitment to change, and together with t
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Behavioral_Therapy"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2088,18 +2382,6 @@ Planning: involves the client making a commitment to change, and together with t
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#STD"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Sexual_Risk_Behavior"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#HIV/AIDS"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2589,7 +2871,7 @@ Data were collected at weekly clinic visits through the end of the taper periods
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#DSM-IV_Diagnosis_of_Opioid_Dependence"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2847,7 +3129,7 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#ADHD"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_1094"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2859,7 +3141,7 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Youth"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#youth"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2937,7 +3219,7 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_9973"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_addicted_to_opioids"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2951,6 +3233,12 @@ The number of patients younger than 18 years was too small to analyze separately
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#disposition_to_be_unemployed"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3049,14 +3337,13 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#HIV_Negative"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#adult"/>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#HIV_Negative"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_526"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3069,18 +3356,6 @@ The number of patients younger than 18 years was too small to analyze separately
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#STD"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Sexual_Risk_Behavior"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#HIV/AIDS"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3353,8 +3628,8 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#Verbal_info_about_testing_with_on-site_testing -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Verbal_info_about_testing_with_on-site_testing">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
-        <rdfs:label>Verbal info about testing with on-site testing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#counseling_for_HIV"/>
+        <rdfs:label>undirected discussion about testing for HIV with on-site testing</rdfs:label>
     </owl:Class>
     
 
@@ -3364,14 +3639,6 @@ Results determined that changes in transaminase levels did not differ by medicat
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Withdrawal_rating">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">withdrawal rating</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.url/sudo/ontology#Youth -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#Youth">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
     </owl:Class>
     
 
@@ -3451,7 +3718,8 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#adolescent -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#adolescent">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who is between 12 and 18 years old</obo:def>
     </owl:Class>
     
 
@@ -3459,7 +3727,9 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#adult -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#adult">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An adult is a human being who is older than 18 years old.</obo:def>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who is an adult</rdfs:label>
     </owl:Class>
     
 
@@ -3505,7 +3775,12 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#hispanic -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#hispanic">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <obo:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The current definition for this term is not acceptable. It is recursive and there is no base case. 
+
+To make a more satisfactory definition I need to express in an ontology what Hispanic culture means.</obo:comment>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Hispanic human being is a human being who has one or more ancestors who is Hispanic.</obo:def>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who has Hispanic heritage</rdfs:label>
     </owl:Class>
     
 
@@ -3522,7 +3797,8 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#inpatient -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#inpatient">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who is hospitalized</rdfs:label>
     </owl:Class>
     
 
@@ -3530,8 +3806,8 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#lives_in_community -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#lives_in_community">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lives in community</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who lives in a community</rdfs:label>
     </owl:Class>
     
 
@@ -3576,7 +3852,7 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#multisite -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#multisite">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
     </owl:Class>
     
 
@@ -3603,7 +3879,10 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#outpatient -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#outpatient">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <obo:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This definition reminds me of Arp&apos;s &quot;canceled oophorectomies&quot;. A patient may be both an inpatient or outpatient. 
+
+There is a process (occurrent) of an outpatient becoming an inpatient (admission) and an inpatient becoming an outpatient (discharge).</obo:comment>
         <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An outpatient is a type of patient who recieves medical care but is not hospitalized.</obo:def>
     </owl:Class>
     
@@ -3622,15 +3901,6 @@ Results determined that changes in transaminase levels did not differ by medicat
     <owl:Class rdf:about="http://purl.url/sudo/ontology#receipt_of_phone_call">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#human_contact"/>
         <rdfs:label>receipt of phone call</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.url/sudo/ontology#seeking_treatment -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#seeking_treatment">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seeking treatment</rdfs:label>
     </owl:Class>
     
 
@@ -3693,8 +3963,8 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#user_of_cocaine -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#user_of_cocaine">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#user_of_substance"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user of cocaine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_who_misuses_a_stimulant"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who misuses cocaine</rdfs:label>
     </owl:Class>
     
 
@@ -3702,8 +3972,8 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#user_of_methamphetamine -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#user_of_methamphetamine">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#user_of_substance"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user of methamphetamine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#human_being_who_misuses_a_stimulant"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who misuses methamphetamine</rdfs:label>
     </owl:Class>
     
 
@@ -3712,7 +3982,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#user_of_opiod">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#user_of_substance"/>
-        <rdfs:label>user of opioid</rdfs:label>
+        <rdfs:label>human being who misuses an opioid</rdfs:label>
     </owl:Class>
     
 
@@ -3720,8 +3990,21 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#user_of_substance -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#user_of_substance">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Enrollment_Population"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user of substance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human being who misuses a substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.url/sudo/ontology#youth -->
+
+    <owl:Class rdf:about="http://purl.url/sudo/ontology#youth">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/MF_0000016"/>
+        <obo:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This definition is not satisfactory. 
+It states that youths are equivalent to minors.
+It does not consider &quot;emancipated minors.&quot;
+It is a work in progress.</obo:comment>
+        <obo:def rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A youth is a human being who is younger than 21 years</obo:def>
     </owl:Class>
     
 
@@ -3823,8 +4106,14 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#ADHD_Rating_Scale_(ADHD-RS) -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#ADHD_Rating_Scale_(ADHD-RS)">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#rating_scale"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_1094"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>ADHD Rating Scale (ADHD-RS)</rdfs:label>
     </owl:Class>
     
@@ -3865,14 +4154,6 @@ This is only partially complete because the liver is not a point. It, certainly,
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Buprenorphine_is_first_line_treatment,_methadone_is_secondary">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Outcome"/>
         <rdfs:label>Buprenorphine is first line treatment, methadone is secondary</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.url/sudo/ontology#HIV/AIDS -->
-
-    <owl:Class rdf:about="http://purl.url/sudo/ontology#HIV/AIDS">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
     </owl:Class>
     
 
