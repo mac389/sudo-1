@@ -1214,6 +1214,15 @@ The value of this property is typically a term from some defined set of values t
     
 
 
+    <!-- http://purl.obolibrary.org/obo/sepio.owl#has_effect -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/sepio.owl#has_effect">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;has effect&apos;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source"/>
@@ -3285,6 +3294,15 @@ Specific examples include:
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115>A ratio is a data item which is formed with two numbers r and s is written r/s, where r is the numerator and s is the denominator. The ratio of r to s is equivalent to the quotient r/s.</obo:IAO_0000115>
         <rdfs:label>obsolete_ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/sepio.owl#Buprenorphine/Naloxone_is_not_associated_with_greater_elevation_in_liver_enzymes_than_Methadone_in_treating_Opioid-Dependent_Patients -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/sepio.owl#Buprenorphine/Naloxone_is_not_associated_with_greater_elevation_in_liver_enzymes_than_Methadone_in_treating_Opioid-Dependent_Patients">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buprenorphine/naloxone is not associated with greater elevation in liver enzymes that methadone in the treatment opioid-dependent patients</rdfs:label>
     </owl:Class>
     
 
