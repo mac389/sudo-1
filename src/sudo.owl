@@ -10037,6 +10037,15 @@ Specific examples include:
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#On-site_rapid_testing_participants_received_more_HIV_test_results_than_off-site_testing_referral_participants. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#On-site_rapid_testing_participants_received_more_HIV_test_results_than_off-site_testing_referral_participants.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-site rapid testing participants receive more HIV test results than off-site testing referral participants.</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#Opioids -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Opioids">
@@ -10293,6 +10302,48 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#buprenorphine_is_more_successful_than_clonidine_at_opioid_detoxification -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#buprenorphine_is_more_successful_than_clonidine_at_opioid_detoxification">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#clonidine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Buprenorphine/buprenorphine_naloxone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buprenorphine/naloxone is more successful than clonidine at opioid detoxification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#contingency_management_does_not_increase_retention_over_abstinence-therapy_alone -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#contingency_management_does_not_increase_retention_over_abstinence-therapy_alone">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Contingency_Management"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contingency management does not increase retention over abstinence-therapy alone</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#death -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#death">
@@ -10315,6 +10366,15 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#elevation_in_transaminase_levels">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevation in serum transaminase levels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#job_seeker_workshop_does_not_increase_employment_above_standard_counseling -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#job_seeker_workshop_does_not_increase_employment_above_standard_counseling">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">job seeker workshop does not increase employment above standard counseling</rdfs:label>
     </owl:Class>
     
 
@@ -10352,6 +10412,15 @@ Limitations of this study included the low prevalence of some drug classes, lead
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_9973"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#on-site_HIV_testing_does_not_reduce_the_number_of_unprotected_intercourse_episodes -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#on-site_HIV_testing_does_not_reduce_the_number_of_unprotected_intercourse_episodes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-site HIV testing does not reduce the number of unprotected intercourse episodes as compare to referral for HIV testing</rdfs:label>
     </owl:Class>
     
 
@@ -10460,7 +10529,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Behavioral_Therapy">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behavioral Therapy</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">behavioral therapy</rdfs:label>
     </owl:Class>
     
 
@@ -10588,7 +10657,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#Clinical_Trial -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Clinical_Trial">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000272"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -10663,7 +10732,19 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Contingency_Management">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency Management</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_302"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_9973"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contingency  management</rdfs:label>
     </owl:Class>
     
 
@@ -10672,8 +10753,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Contingency_management_interventions">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency management intervention</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency management intervention</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contingency management intervention</rdfs:label>
     </owl:Class>
     
 
@@ -11149,6 +11229,12 @@ Limitations of this study included the low prevalence of some drug classes, lead
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/sepio.owl#Buprenorphine/Naloxone_is_not_associated_with_greater_elevation_in_liver_enzymes_than_Methadone_in_treating_Opioid-Dependent_Patients"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_allocation"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#random"/>
             </owl:Restriction>
@@ -11223,12 +11309,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Pharmacological_Therapy"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Suboxone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -11701,6 +11781,12 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Study_Specification_Number_323">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#contingency_management_does_not_increase_retention_over_abstinence-therapy_alone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
@@ -12248,6 +12334,12 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#job_seeker_workshop_does_not_increase_employment_above_standard_counseling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_allocation"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#random"/>
             </owl:Restriction>
@@ -12349,6 +12441,18 @@ The number of patients younger than 18 years was too small to analyze separately
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Study_Specification_Number_809">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#On-site_rapid_testing_participants_received_more_HIV_test_results_than_off-site_testing_referral_participants."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#on-site_HIV_testing_does_not_reduce_the_number_of_unprotected_intercourse_episodes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_allocation"/>
@@ -12632,12 +12736,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Liver"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Suboxone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
