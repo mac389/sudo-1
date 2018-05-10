@@ -21,7 +21,7 @@ Numbers are study numbers, not CTN numbers. Except when they refer to CTN number
 | 13 	| ~~17~~ 	| 17 	|
 | 46 	| ~~21~~ 	| 21 	|
 | 14 	| ~~11~~ 	| 11 	|
-| 30 	| ~~27~~ 	| ~~27 (90)~~|
+| 30 	| ~~27~~ 	| ~~27 (90)~~ |
 | 15 	| ~~32~~ 	| 32 	|
 | 12 	| ~~47~~ 	| 47 	|
 | 52 	| ~~28~~ 	| 28 	|
@@ -32,5 +32,5 @@ Numbers are study numbers, not CTN numbers. Except when they refer to CTN number
 | 18 	| ~~35~~ 	| 35 	|
 | 19 	|  			|  		|
 | 5 (90)| 			| ~~5 (90)~~ |
-| 89 (6)| 			| ~~ 89 (6) ~~|
+| 89 (6)| 			| ~~ 89 (6)~~ |
 | 87  (1)| 			| ~~ 87(1) ~~ | 
