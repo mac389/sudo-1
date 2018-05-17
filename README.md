@@ -1,5 +1,9 @@
-# sudo
+# sudo, the _s_ubstance _u_se _d_isorders _o_ntology
+
+
 Substance Use Disorders Ontology
+   
+
 
 Competency Questions
 1. What schedules of buprenorphine work?
