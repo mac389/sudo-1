@@ -1,23 +1,14 @@
-# sudo, the *s*ubstance _u_se _d_isorders _o_ntology
+# sudo, the *s*ubstance *u*se *d*isorders *o*ntology
 
+*sudo* aims to provide a logically consistent description of the main study findings of all clinical trials related to opioid misuse that were publised on NIDA's Clinical Data Share.    
 
-Substance Use Disorders Ontology
-   
-
+*sudo* extends SEPIO
 
 Competency Questions
 1. What schedules of buprenorphine work?
+1. Is methadone superior to buprenorphine for treating opioid dependence?
 
-Want title, keywords, PICO info, link to publications
-
-Convert HTML records to XML
-  -- do this manually, or make HTML form from XSD (seems easier to start by hand)
-
- Use XML records as database rather than building intermediate layer. 
- -Can see how to use ontologies via XML. 
-
-_Standardize outcome vs. comparison vs. conclusion_
-
+**TODO**
 
 | Study No.  | CTN | In SEPIO |
 |------------|-----|----------|
