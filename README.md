@@ -1,4 +1,4 @@
-# sudo, the _s_ubstance _u_se _d_isorders _o_ntology
+# sudo, the *s*ubstance _u_se _d_isorders _o_ntology
 
 
 Substance Use Disorders Ontology
