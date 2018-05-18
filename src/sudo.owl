@@ -10034,8 +10034,8 @@ Specific examples include:
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Study_Specification_Number_901"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000130"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buprenorphine/naloxone does not cause more damage to the liver than methadone for the treatment of opioid-dependent patients</rdfs:label>
@@ -10164,6 +10164,36 @@ Specific examples include:
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Opioids">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstincence-based_no_incentive_condition_attended_x_sessions -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstincence-based_no_incentive_condition_attended_x_sessions">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participants assigned to the abstincence-based no incentive condition attended a mean +/- SD of 15.7 +/- 14.4 sessions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstincence-based_no_incentive_condition_remained_in_treatment_for_four_weeks -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstincence-based_no_incentive_condition_remained_in_treatment_for_four_weeks">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participants assigned to the abstincence-based no incentive condition remained in treatment for a mean +/- SD of 6.9 +/- 4.4 weeks</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstinence-based_incentive_condition_attended_counseling_sessions -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstinence-based_incentive_condition_attended_counseling_sessions">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participants assigned to the abstinence-based incentive condition attended a mean +/- SD of 19.2 +/- 16.8 counseling sessions</rdfs:label>
     </owl:Class>
     
 
@@ -10394,6 +10424,48 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#adding_contingency_management_to_standard_therapy_significantly_increases_the_number_of_weeks_remaining_in_treatment -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#adding_contingency_management_to_standard_therapy_significantly_increases_the_number_of_weeks_remaining_in_treatment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstincence-based_no_incentive_condition_attended_x_sessions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstinence-based_incentive_condition_attended_counseling_sessions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adding contingency management to standard therapy significantly increases the number of weeks a patient remains in treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#adding_contingency_management_to_therapy_significantly_increases_the_number_of_sessions_attended_per_week -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#adding_contingency_management_to_therapy_significantly_increases_the_number_of_sessions_attended_per_week">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Participants_assigned_to_the_abstincence-based_no_incentive_condition_remained_in_treatment_for_four_weeks"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#participants_assigned_to_the_abstinence-based_incentive_condition_remained_in_treatment_for_eight_weeks"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adding contingency management to standard therapy significantly increases the number of sessions attended per week</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#african -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#african">
@@ -10436,7 +10508,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
                 <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#level_of_AST_in_those_with_opioid_dependence_treated_with_buprenorphine/naltrexone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buprenorphine/naloxone and methadone cause statistically indistinguishable elevations in serum levels of AST or ALT</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buprenorphine/naloxone and methadone cause statistically indistinguishable elevations in serum levels of AST or ALT</rdfs:label>
     </owl:Class>
     
 
@@ -10548,6 +10620,62 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#contingency_management_helps_maintain_drug_abstinence_in_community_practice -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#contingency_management_helps_maintain_drug_abstinence_in_community_practice">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#adding_contingency_management_to_standard_therapy_significantly_increases_the_number_of_weeks_remaining_in_treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#adding_contingency_management_to_therapy_significantly_increases_the_number_of_sessions_attended_per_week"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#contingency_management_helps_maintain_drug_abstinence_in_community_practice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contingency management helps maintain drug abstinence in community practice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#contingency_management_works_but_is_rarely_used_in_community_settings -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#contingency_management_works_but_is_rarely_used_in_community_settings">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Community_health_services"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Contingency_Management"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#abstinence_from_using_substance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contingency management interventions that provide tangible incentives based on objective indicators of drug abstinence are efficacious in improving outcomes in substance abusers, but these treatments have rarely been implemented in community-based settings.</terms:description>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contingency management helps maintain drug abstinence, but is rarely done in community practices</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#death -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#death">
@@ -10615,12 +10743,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#motivational_enhancement_therapy_is_no_more_effective_then_conventional_therapy_at">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000130"/>
-                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motivational enhancement therapy is no more effective then conventional therapy at reducing substance use in hispanic americans</rdfs:label>
     </owl:Class>
     
@@ -10666,6 +10788,56 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#on-site_HIV_testing_does_not_reduce_the_number_of_unprotected_intercourse_episodes">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-site HIV testing does not reduce the number of unprotected intercourse episodes as compare to referral for HIV testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#p-value_for_alcohol-free_urine_samples -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#p-value_for_alcohol-free_urine_samples">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p-value for fraction of alcohol-free urine samples between outpatients receiving contingency management therapy versus therapy as usual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#p-value_for_continengency_management_vs_treatment_as_usual_for_number_of_weeks_remaining_in_treatment -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#p-value_for_continengency_management_vs_treatment_as_usual_for_number_of_weeks_remaining_in_treatment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p-value for continengency management vs treatment as usual for number of weeks remaining in treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#p-value_for_continengency_management_vs_treatment_as_usual_in_number_of_sessions_attended -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#p-value_for_continengency_management_vs_treatment_as_usual_in_number_of_sessions_attended">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p-value for continengency management vs treatment as usual in number of sessions attended</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#p-value_for_stimulant-free_urine_samples -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#p-value_for_stimulant-free_urine_samples">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p-value for fraction of stimulant-free urine samples between outpatients receiving contingency management therapy versus therapy as usual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#participants_assigned_to_the_abstinence-based_incentive_condition_remained_in_treatment_for_eight_weeks -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#participants_assigned_to_the_abstinence-based_incentive_condition_remained_in_treatment_for_eight_weeks">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participants assigned to the abstinence-based incentive condition remained in treatment for a mean +/- SD of 8.0 +/- 4.2 weeks</rdfs:label>
     </owl:Class>
     
 
@@ -10740,16 +10912,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level of ALT in those with opioid dependence treated with buprenorphine/naltrexone</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/sudo/ontology/sudo.owl#level_of_ALT_is_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone -->
-
-    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#level_of_ALT_is_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level of ALT is comparable in those treated with buprenorphine/naltrexone or methadone</rdfs:label>
     </owl:Class>
     
 
@@ -11008,7 +11170,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Concentration_of_compound_in_urine">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concentration of compound in urine</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concentration of compound in urine</rdfs:label>
     </owl:Class>
     
 
@@ -11056,6 +11218,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Counseling">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counseling</rdfs:label>
     </owl:Class>
     
 
@@ -11064,7 +11227,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Count_of_counseling_sessions_attended">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Counseling"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Count of counseling sessions attended</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count of counseling sessions attended</rdfs:label>
     </owl:Class>
     
 
@@ -11091,7 +11254,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Craving_rating">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craving rating</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">craving rating</rdfs:label>
     </owl:Class>
     
 
@@ -11441,7 +11604,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Percent_of_counseling_sessions_attended">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Counseling"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label>Percent of counseling sessions attended</rdfs:label>
+        <rdfs:label>fraction of counseling sessions attended</rdfs:label>
     </owl:Class>
     
 
@@ -11554,12 +11717,6 @@ Limitations of this study included the low prevalence of some drug classes, lead
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/sepio.owl#Buprenorphine/Naloxone_is_not_associated_with_greater_elevation_in_liver_enzymes_than_Methadone_in_treating_Opioid-Dependent_Patients"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -12049,6 +12206,12 @@ Limitations of this study included the low prevalence of some drug classes, lead
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#contingency_management_does_not_increase_retention_over_abstinence-therapy_alone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#participants_assigned_to_the_abstinence-based_incentive_condition_remained_in_treatment_for_eight_weeks"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -12809,12 +12972,6 @@ Despite recent emphasis on integrating empirically validated treatment into clin
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#level_of_ALT_is_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#level_of_AST_in_those_with_opioid_dependence_treated_with_buprenorphine/naltrexone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -12924,7 +13081,7 @@ Results determined that changes in transaminase levels did not differ by medicat
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Unprotected_anal_or_vaginal_intercourse_episodes">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label>Unprotected anal or vaginal intercourse episodes</rdfs:label>
+        <rdfs:label>Count of episodes of unprotected anal or vaginal intercourse (needs to be split)</rdfs:label>
     </owl:Class>
     
 

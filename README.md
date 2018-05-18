@@ -13,9 +13,9 @@ Competency Questions
 | Study No.  | CTN | In SEPIO |
 |------------|-----|----------|
 | 901        | 27  | Yes      |
-| 90         | 5   |          |
-| 89         | 6   |          |
-| 87         | 1   |          |
+| 90         | 5   | No, abstract describes no findings in sufficient detail. |
+| 89         | 6   | Yes      |
+| 87         | 1   | No, the abstract describes no findings in sufficient detail.|
 | 809        | 32  |          |
 | 713        | 20  |          |
 | 710        | 28  |          |
