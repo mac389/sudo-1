@@ -10081,6 +10081,21 @@ Specific examples include:
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Although_both_interventions_resulted_in_reductions_in_substance_use_during_the_4-week_therapy_phase. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Although_both_interventions_resulted_in_reductions_in_substance_use_during_the_4-week_therapy_phase.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Motivational_Interviewing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">individual motivational interviewing did not result in more reductions in substance use than group counseling over four weeks of therapy</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#An_intervention_designed_to_increase_employment_may_also_improve_drug_abuse_treatment_outcomes -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#An_intervention_designed_to_increase_employment_may_also_improve_drug_abuse_treatment_outcomes">
@@ -10491,6 +10506,39 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#The_usual_treatment_for_opioid-addicted_youth_is_detoxification_and_counseling. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#The_usual_treatment_for_opioid-addicted_youth_is_detoxification_and_counseling.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#detoxification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Counseling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Youth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the usual treatment for opioid-addicted youth is detoxification and counseling</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#Unclear_understanding_of_HCV_and_implications -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Unclear_understanding_of_HCV_and_implications">
@@ -10760,6 +10808,14 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#detoxification -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#detoxification">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#discussion_of_HCV_testing_and_treatment_barriers -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#discussion_of_HCV_testing_and_treatment_barriers">
@@ -10835,6 +10891,18 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#motivational_enhancement_therapy_is_no_more_effective_then_conventional_therapy_at">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Motivational_Interviewing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Although_both_interventions_resulted_in_reductions_in_substance_use_during_the_4-week_therapy_phase."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motivational enhancement therapy is no more effective then conventional therapy at reducing substance use in hispanic americans</rdfs:label>
     </owl:Class>
     
@@ -12527,6 +12595,12 @@ Data were collected at weekly clinic visits through the end of the taper periods
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#describes_assertion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#The_usual_treatment_for_opioid-addicted_youth_is_detoxification_and_counseling."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_intervention"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -12630,6 +12704,12 @@ The number of patients younger than 18 years was too small to analyze separately
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#describes_assertion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#motivational_enhancement_therapy_is_no_more_effective_then_conventional_therapy_at"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_intervention"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -12645,12 +12725,6 @@ The number of patients younger than 18 years was too small to analyze separately
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_measurement"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Reductions_in_drug_risk"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#motivational_enhancement_therapy_is_no_more_effective_then_conventional_therapy_at"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

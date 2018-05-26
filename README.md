@@ -10,7 +10,7 @@ Competency Questions
 
 **TODO**
 
-| Study No.  | CTN | In SEPIO |
+| Study No.  | CTN |: In SEPIO |
 |------------|-----|----------|
 | 901        | 27  | Yes      |
 | 90         | 5   | No, abstract describes no findings in sufficient detail. |
@@ -19,8 +19,8 @@ Competency Questions
 | 809        | 32  |  Yes, only study finding, no evidence line.        |
 | 713        | 20  |  Yes     |
 | 710        | 28  |   Yes    |
-| 515        | 17  |   Yes       |
-| 359        | 21  |          |
+| 515        | 17  |   Yes    |
+| 359        | 21  |   Yes    |
 | 328        | 10  |          |
 | 323        | 3   |          |
 | 254        | 11  |          |
