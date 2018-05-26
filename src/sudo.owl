@@ -10117,6 +10117,22 @@ Specific examples include:
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#At_follow-up_both_groups_had_high_use_of_opioids -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#At_follow-up_both_groups_had_high_use_of_opioids">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at follow-up both groups had high use of opioids</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#CTN-049 -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#CTN-049">
@@ -10181,9 +10197,9 @@ Specific examples include:
     <!-- http://purl.org/sudo/ontology/sudo.owl#Number_of_positive_hair_samples_for_drug_use -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Number_of_positive_hair_samples_for_drug_use">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#drug_abuse_treatment_outcomes"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label>Number of positive hair samples for drug use</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of positive hair samples for drug use</rdfs:label>
     </owl:Class>
     
 
@@ -10285,6 +10301,66 @@ Specific examples include:
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">participants assigned to the abstinence-based incentive condition attended a mean +/- SD of 19.2 +/- 16.8 counseling sessions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_did_not_have_a_higher_proportion_of_positive_urine_drug_tests_at_12_weeks_than_did_patients_in_the_12-week_treatment_group. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_did_not_have_a_higher_proportion_of_positive_urine_drug_tests_at_12_weeks_than_did_patients_in_the_12-week_treatment_group.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patients in the 14-day taper group did not have a higher proportion of positive urine drug tests at 12 weeks than did patients in the 12-week treatment group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_had_a_higher_proportion_of_positive_urine_drug_tests_at_4_weeks_than_did_patients_in_the_12-week_treatment_group. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_had_a_higher_proportion_of_positive_urine_drug_tests_at_4_weeks_than_did_patients_in_the_12-week_treatment_group.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_2559"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#detoxification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patients in the 14-day taper group had a higher proportion of positive urine drug tests at 4 weeks than did patients in the 12-week treatment group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_had_a_higher_proportion_of_positive_urine_drug_tests_at_8_weeks_than_did_patients_in_the_12-week_treatment_group. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_had_a_higher_proportion_of_positive_urine_drug_tests_at_8_weeks_than_did_patients_in_the_12-week_treatment_group.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patients in the 14-day taper group had a higher proportion of positive urine drug tests at 8 weeks than did patients in the 12-week treatment group</rdfs:label>
     </owl:Class>
     
 
@@ -10829,7 +10905,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#drug_abuse_treatment_outcomes">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug abuse treatment outcomes</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug abuse treatment outcome</rdfs:label>
     </owl:Class>
     
 
@@ -10839,6 +10915,84 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#elevation_in_transaminase_levels">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elevation in serum transaminase levels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_is_associated_with_less_substance_misuse_than_a_14_day_taper_when_treating_youths_who_misuse_opioids -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_is_associated_with_less_substance_misuse_than_a_14_day_taper_when_treating_youths_who_misuse_opioids">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_injecting_of_substance."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_nonstudy_addiction_treatment."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_opioid_use."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extended buprenorphine-naloxone treatment is associated with less substance misuse than a 14 day taper when treating youths who misuse opioids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_is_associated_with_no_less_substance_misuse_after_treatment_than_a_14_day_taper_in_youths_who_misuse_opioids -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_is_associated_with_no_less_substance_misuse_after_treatment_than_a_14_day_taper_in_youths_who_misuse_opioids">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_is_associated_with_less_substance_misuse_than_a_14_day_taper_when_treating_youths_who_misuse_opioids"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000006"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_is_associated_with_no_less_substance_misuse_after_treatment_than_a_14_day_taper_in_youths_who_misuse_opioids"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extended buprenorphine-naloxone treatment is associated with no less substance misuse after treatment than a 14 day taper in youths who misuse opioids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_reduces_poisitive_urine_drug_tests_during_treatment -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#extended_buprenorphine-naloxone_treatment_reduces_poisitive_urine_drug_tests_during_treatment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_had_a_higher_proportion_of_positive_urine_drug_tests_at_4_weeks_than_did_patients_in_the_12-week_treatment_group."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_14-day_taper_group_had_a_higher_proportion_of_positive_urine_drug_tests_at_8_weeks_than_did_patients_in_the_12-week_treatment_group."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extended buprenorphine-naloxone treatment is associated with fewer positive urine drug screens than a 14 day taper when treating youths who misuse opioids</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#extended_medication-assisted_therapy_may_be_more_helpful -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#extended_medication-assisted_therapy_may_be_more_helpful">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extended medication-assisted therapy may be more helpful in treating youths addicted to opioids</rdfs:label>
     </owl:Class>
     
 
@@ -11076,12 +11230,75 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#For_individuals_terminating_buprenorphine_pharmacotherapy_for_opioid_dependence,_there_appears_to_be_no_advantage_in_prolonging_the_duration_of_taper. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#For_individuals_terminating_buprenorphine_pharmacotherapy_for_opioid_dependence,_there_appears_to_be_no_advantage_in_prolonging_the_duration_of_taper.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For individuals terminating buprenorphine pharmacotherapy for opioid dependence, there appears to be no advantage in prolonging the duration of taper</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#Levels_of_transaminases_are_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Levels_of_transaminases_are_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level of AST is comparable in those treated with buprenorphine/naltrexone or methadone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_injecting_of_substance. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_injecting_of_substance.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patients in the 12-week buprenorphine/naloxone group reported less injecting of substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_nonstudy_addiction_treatment. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_nonstudy_addiction_treatment.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patients in the 12-week buprenorphine/naloxone group reported less nonstudy addiction treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_opioid_use. -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Patients_in_the_12-week_buprenorphine/naloxone_group_reported_less_opioid_use.">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000108"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patients in the 12-week buprenorphine/naloxone group reported less opioid use.</rdfs:label>
     </owl:Class>
     
 
@@ -11757,8 +11974,8 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <!-- http://purl.url/sudo/ontology#Number_of_negative_urine_samples -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Number_of_negative_urine_samples">
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of positive urine samples</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#drug_abuse_treatment_outcomes"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of positive urine samples</rdfs:label>
     </owl:Class>
     
 
@@ -12493,6 +12710,12 @@ Limitations of this study included the low prevalence of some drug classes, lead
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Clinical_Trial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#describes_assertion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#For_individuals_terminating_buprenorphine_pharmacotherapy_for_opioid_dependence,_there_appears_to_be_no_advantage_in_prolonging_the_duration_of_taper."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_allocation"/>
                 <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#random"/>
             </owl:Restriction>
@@ -12597,6 +12820,12 @@ Data were collected at weekly clinic visits through the end of the taper periods
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#describes_assertion"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#The_usual_treatment_for_opioid-addicted_youth_is_detoxification_and_counseling."/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#describes_assertion"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#extended_medication-assisted_therapy_may_be_more_helpful"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -13454,9 +13683,9 @@ Results determined that changes in transaminase levels did not differ by medicat
     <!-- http://purl.url/sudo/ontology#cigarettes_smoked_per_day -->
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#cigarettes_smoked_per_day">
+        <rdfs:subClassOf rdf:resource="http://purl.org/sudo/ontology/sudo.owl#drug_abuse_treatment_outcomes"/>
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Comparison"/>
-        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
-        <rdfs:label>cigarettes smoked per day</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of cigarettes smoked per day</rdfs:label>
     </owl:Class>
     
 
