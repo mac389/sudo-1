@@ -16,10 +16,10 @@ Competency Questions
 | 90         | 5   | No, abstract describes no findings in sufficient detail. |
 | 89         | 6   | Yes      |
 | 87         | 1   | No, the abstract describes no findings in sufficient detail.|
-| 809        | 32  |          |
-| 713        | 20  |          |
-| 710        | 28  |          |
-| 515        | 17  |          |
+| 809        | 32  |  Yes, only study finding, no evidence line.        |
+| 713        | 20  |  Yes     |
+| 710        | 28  |   Yes    |
+| 515        | 17  |   Yes       |
 | 359        | 21  |          |
 | 328        | 10  |          |
 | 323        | 3   |          |

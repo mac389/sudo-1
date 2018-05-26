@@ -1794,6 +1794,15 @@ Another example: I can access the page for tomorrow weather in Boston (http://ww
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#describes_assertion -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#describes_assertion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describes assertion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#has_abbreviation -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#has_abbreviation">
@@ -1851,6 +1860,16 @@ Another example: I can access the page for tomorrow weather in Boston (http://ww
     <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#is_generally_accepted_treatment_for">
         <rdfs:subPropertyOf rdf:resource="http://purl.url/sudo/ontology#is_treatment_for"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is generally accepted treatment for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#&apos;has_supposition&apos; -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/sudo/ontology/sudo.owl#&apos;has_supposition&apos;">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has supposition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -10053,6 +10072,36 @@ Specific examples include:
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Adding_OROS_to_CBT_did_not_further_reduct_the_number_of_days_of_substance_use -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Adding_OROS_to_CBT_did_not_further_reduct_the_number_of_days_of_substance_use">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osmotic-release methylphenidate did not idecrease the number of days of substance significantly more than placebo at treating symptoms of ADHD in adolescents already reciving cognitive behavioral therapy.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#An_intervention_designed_to_increase_employment_may_also_improve_drug_abuse_treatment_outcomes -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#An_intervention_designed_to_increase_employment_may_also_improve_drug_abuse_treatment_outcomes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#relationship_between_unempoyment_and_drug_abuse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#unemployment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">an intervention designed to increase employment may also improve drug abuse treatment outcomes</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#CTN-049 -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#CTN-049">
@@ -10127,7 +10176,7 @@ Specific examples include:
     <!-- http://purl.org/sudo/ontology/sudo.owl#OROS-MPH_did_not_show_greater_efficacy_than_placebo -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#OROS-MPH_did_not_show_greater_efficacy_than_placebo">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
@@ -10151,10 +10200,37 @@ Specific examples include:
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#OROS_does_not_potentiate_CBT_in_treating_ADHD_symptoms -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#OROS_does_not_potentiate_CBT_in_treating_ADHD_symptoms">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Adding_OROS_to_CBT_did_not_further_reduct_the_number_of_days_of_substance_use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#OROS_does_not_potentiate_CBT_in_treating_ADHD_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osmotic-release methylphenidate does not significantly increase clinician-administered ADHD-RS scores or significantly decrease drug use in adolescents already reciving cognitive behavioral therapy.</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#On-site_rapid_testing_participants_received_more_HIV_test_results_than_off-site_testing_referral_participants. -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#On-site_rapid_testing_participants_received_more_HIV_test_results_than_off-site_testing_referral_participants.">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#HIV/HCV_Counseling_and_Education"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-site rapid testing participants receive more HIV test results than off-site testing referral participants.</rdfs:label>
     </owl:Class>
     
@@ -10693,6 +10769,15 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#drug_abuse_treatment_outcomes -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#drug_abuse_treatment_outcomes">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drug abuse treatment outcomes</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#elevation_in_transaminase_levels -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#elevation_in_transaminase_levels">
@@ -10706,6 +10791,13 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#job_seeker_workshop_does_not_increase_employment_above_standard_counseling">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000084"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#Standard_job_counseling__and_standard_job_counseling_+_SWJ_had_similar_12-_and_24-week_results_for_obtaining_a_new_taxed_job_or_enrollment_in_a_training_program"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">job seeker workshop does not increase employment above standard counseling</rdfs:label>
     </owl:Class>
     
@@ -10788,6 +10880,26 @@ Limitations of this study included the low prevalence of some drug classes, lead
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#on-site_HIV_testing_does_not_reduce_the_number_of_unprotected_intercourse_episodes">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000001"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-site HIV testing does not reduce the number of unprotected intercourse episodes as compare to referral for HIV testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#one-fifth_of_participants_at_12_weeks_obtained_a_job -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#one-fifth_of_participants_at_12_weeks_obtained_a_job">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">one-fifth of participants at 12 weeks obtained a job</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#one-third_at_24_weeks_had_positive_outcomes -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#one-third_at_24_weeks_had_positive_outcomes">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">one-third at 24 weeks obtained a job</rdfs:label>
     </owl:Class>
     
 
@@ -10878,12 +10990,39 @@ Limitations of this study included the low prevalence of some drug classes, lead
     
 
 
+    <!-- http://purl.org/sudo/ontology/sudo.owl#relationship_between_unempoyment_and_drug_abuse -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#relationship_between_unempoyment_and_drug_abuse">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relationship between unempoyment and drug abuse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#unemployment -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#unemployment">
+        <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Keyword"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unemployment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/sudo/ontology/sudo.owl#Levels_of_transaminases_are_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone -->
 
     <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Levels_of_transaminases_are_comparable_in_those_treated_with_buprenorphine/naltrexone_or_methadone">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000173"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level of AST is comparable in those treated with buprenorphine/naltrexone or methadone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sudo/ontology/sudo.owl#Standard_job_counseling__and_standard_job_counseling_+_SWJ_had_similar_12-_and_24-week_results_for_obtaining_a_new_taxed_job_or_enrollment_in_a_training_program -->
+
+    <owl:Class rdf:about="http://purl.org/sudo/ontology/sudo.owl#Standard_job_counseling__and_standard_job_counseling_+_SWJ_had_similar_12-_and_24-week_results_for_obtaining_a_new_taxed_job_or_enrollment_in_a_training_program">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SEPIO_0000149"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">standard job counseling  and standard job counseling + SWJ had similar 12- and 24-week results for obtaining a new taxed job or enrollment in a training program</rdfs:label>
     </owl:Class>
     
 
@@ -11429,7 +11568,7 @@ Limitations of this study included the low prevalence of some drug classes, lead
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Local_employment_resources">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#Intervention"/>
-        <rdfs:label>Local employment resources</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provision of local employment resources</rdfs:label>
     </owl:Class>
     
 
@@ -12614,12 +12753,6 @@ The number of patients younger than 18 years was too small to analyze separately
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#OROS-MPH_did_not_show_greater_efficacy_than_placebo"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#has_population"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -12678,17 +12811,18 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_intervention"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Local_employment_resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_intervention"/>
                 <owl:someValuesFrom>
                     <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
+                        <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.url/sudo/ontology#Local_employment_resources"/>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#Local_employment_resources"/>
-                                    <rdf:Description rdf:about="http://purl.url/sudo/ontology#Job_Seekers&apos;_Workshop_(JSW)"/>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:unionOf>
+                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Job_Seekers&apos;_Workshop_(JSW)"/>
+                        </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
@@ -12710,6 +12844,24 @@ The number of patients younger than 18 years was too small to analyze separately
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#job_seeker_workshop_does_not_increase_employment_above_standard_counseling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#&apos;has_supposition&apos;"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#An_intervention_designed_to_increase_employment_may_also_improve_drug_abuse_treatment_outcomes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#relationship_between_unempoyment_and_drug_abuse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.url/sudo/ontology#thematically_related_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#unemployment"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -12744,7 +12896,7 @@ The number of patients younger than 18 years was too small to analyze separately
                 <owl:allValuesFrom rdf:resource="http://purl.url/sudo/ontology#CTN-020"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>This is the Primary Outcomes Paper for CTN-0020. Unemployment is associated with negative outcomes both during and after drug abuse treatment. Interventions designed to increase rates of employment may also improve drug abuse treatment outcomes. The purpose of this multi-site clinical trial, protocol CTN-0020, was to evaluate the Job Seekers&apos; Workshop (JSW), a three-session, manualized program designed to train patients in the skills needed to find and secure a job. Study participants were recruited through the National Drug Abuse Treatment Clinical Trials Network (CTN) from six psychosocial counseling (n=327) and five methadone maintenance (n=301) drug treatment programs. Participants were randomly assigned to either standard care (program-specific services plus brochure with local employment resources) (SC) or standard care plus JSW. Three 4-h small group JSW sessions were offered weekly by trained JSW facilitators with ongoing fidelity monitoring. JSW and SC participants had similar 12- and 24-week results for the primary outcome measure (i.e., obtaining a new taxed job or enrollment in a training program). Specifically, one-fifth of participants at 12 weeks (20.1-24.3%) and nearly one-third at 24 weeks (31.4-31.9%) had positive outcomes, with &quot;obtaining a new taxed job&quot; accounting for the majority of cases.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the Primary Outcomes Paper for CTN-0020. Unemployment is associated with negative outcomes both during and after drug abuse treatment. Interventions designed to increase rates of employment may also improve drug abuse treatment outcomes. The purpose of this multi-site clinical trial, protocol CTN-0020, was to evaluate the Job Seekers&apos; Workshop (JSW), a three-session, manualized program designed to train patients in the skills needed to find and secure a job. Study participants were recruited through the National Drug Abuse Treatment Clinical Trials Network (CTN) from six psychosocial counseling (n=327) and five methadone maintenance (n=301) drug treatment programs. Participants were randomly assigned to either standard care (program-specific services plus brochure with local employment resources) (SC) or standard care plus JSW. Three 4-h small group JSW sessions were offered weekly by trained JSW facilitators with ongoing fidelity monitoring. JSW and SC participants had similar 12- and 24-week results for the primary outcome measure (i.e., obtaining a new taxed job or enrollment in a training program). Specifically, one-fifth of participants at 12 weeks (20.1-24.3%) and nearly one-third at 24 weeks (31.4-31.9%) had positive outcomes, with &quot;obtaining a new taxed job&quot; accounting for the majority of cases.</rdfs:comment>
         <rdfs:label>Study Specification Number 713</rdfs:label>
     </owl:Class>
     
@@ -12771,26 +12923,19 @@ The number of patients younger than 18 years was too small to analyze separately
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_measurement"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Receipt_of_HIV_test_results"/>
-                            <rdf:Description rdf:about="http://purl.url/sudo/ontology#Unprotected_anal_or_vaginal_intercourse_episodes"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Receipt_of_HIV_test_results"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_description_of_measurement"/>
+                <owl:someValuesFrom rdf:resource="http://purl.url/sudo/ontology#Unprotected_anal_or_vaginal_intercourse_episodes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#On-site_rapid_testing_participants_received_more_HIV_test_results_than_off-site_testing_referral_participants."/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/sudo/ontology/sudo.owl#has_study_finding"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/sudo/ontology/sudo.owl#on-site_HIV_testing_does_not_reduce_the_number_of_unprotected_intercourse_episodes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -13698,7 +13843,7 @@ Results determined that changes in transaminase levels did not differ by medicat
 
     <owl:Class rdf:about="http://purl.url/sudo/ontology#Job_Seekers&apos;_Workshop_(JSW)">
         <rdfs:subClassOf rdf:resource="http://purl.url/sudo/ontology#human_contact"/>
-        <rdfs:label>Job Seekers Workshop (JSW)</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provision of job skills training through Job Seekers Workshop (JSW)</rdfs:label>
     </owl:Class>
     
 
