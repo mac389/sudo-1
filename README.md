@@ -5,8 +5,9 @@
 *sudo* extends SEPIO
 
 Competency Questions
-1. What schedules of buprenorphine work?
-1. Is methadone superior to buprenorphine for treating opioid dependence?
+1. What outcome measures does medication assisted therapy (MAT) improve in what population?
+1. What outcome measures does motivational interviewing improve in what population?
+1. What outcome measures does _treatment modality_ improve in _poulation_?
 
 **TODO**
 
