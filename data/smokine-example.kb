@@ -1,0 +1,7 @@
+Smokes(person)
+Cancer(person)
+Friends(person,person)
+
+Smokes(p) => Cancer(p)
+Friends(p1,p2) => Friends(p2,p1)
+Friends(p1,p2) => (Smokes(p1) <=> Smokes(p2))

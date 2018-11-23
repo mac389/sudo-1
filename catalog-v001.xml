@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://ogms.googlecode.com/svn/trunk/src/ontology/ogms.owl" uri="src/ogms.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/MF/external/doid-slim.owl" uri="src/doid-slim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/MF.owl" uri="current-version.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/MF/external/GO_import.owl" uri="src/GO_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/MF/external/behavior-slim.owl" uri="src/behavior-slim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/MF/external/bfo-properties-slim.owl" uri="src/bfo-properties-slim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/MFOMD.owl" uri="mfomd.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/bfo.owl" uri="src/bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/cmo.owl" uri="src/cmo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/doid.owl" uri="src/doid.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/doid/imports/hp_import.owl" uri="src/hp_import.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/doid/imports/uberon_import.owl" uri="src/x.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/dron.owl/" uri="src/dron-full.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/eco.owl" uri="src/eco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="duplicate:http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl" uri="src/ontology-metadata-slim.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="duplicate:http://purl.obolibrary.org/obo/iao/dev/ontology-metadata.owl" uri="src/ontology-metadata.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/sepio.owl" uri="src/sepio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/so.owl" uri="src/so.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.obolibrary.org/obo/trans.owl" uri="src/trans.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="http://purl.org/dc/elements/1.1/" uri="src/protege-dc.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="duplicate:http://purl.org/sudo/ontology/sudo.owl" uri="src/sudo-main.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="duplicate:http://purl.org/sudo/ontology/sudo.owl" uri="src/without-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="duplicate:http://purl.org/sudo/ontology/sudo.owl" uri="src/sudo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="shadowed:http://purl.obolibrary.org/obo/MF.owl" uri="src/MF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="shadowed:http://purl.obolibrary.org/obo/MF.owl" uri="src/MF-core.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="shadowed:http://purl.obolibrary.org/obo/MFOMD.owl" uri="src/MFOMD.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1528843307297" name="shadowed:http://purl.obolibrary.org/obo/MFOMD.owl" uri="src/MD-core.owl"/>
+    </group>
+</catalog>

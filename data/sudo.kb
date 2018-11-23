@@ -1,0 +1,63 @@
+/*
+This is the Results Article for CTN-0035-Ot. Illicit drug users have a high prevalence of HCV and 
+represent the majority of newly infected persons in the U.S. Despite the availability of effective 
+HCV treatment, few drug users have been evaluated or treated for HCV. Racial and ethnic minorities 
+have a higher incidence and prevalence of HCV and higher HCV-related mortality. Factors contributing 
+to poor engagement in care are incompletely understood. In this study, National Drug Abuse Treatment 
+Clinical Trials Network protocol CTN-0035-Ot ("Access to HIV and Hepatitis Screening and Care Among 
+Ethnic Minority Drug Users In and Out of Drug Treatment"), fourteen mixed-gender focus groups of either 
+African American or Latino/a drug users (N=95) discussed barriers to HCV testing and treatment. Themes 
+were identified through content analysis of focus group discussions. Many drug users were tested for HCV 
+in settings where they were receiving care. Outside of these settings, most were unaware of voluntary 
+test sites. After testing HCV positive, drug users reported not receiving clear messages regarding the 
+meaning of a positive HCV test, the impact of HCV infection, or appropriate next steps including HCV 
+clinical evaluations. Many drug users perceived treatment as unimportant because they lacked symptoms, 
+health care providers minimized the severity of the diagnosis, or providers did not recommend treatment. 
+Mistrust of the motivations of health care providers was cited as a barrier to pursuing treatment. Social 
+networks or social interactions were a source of HCV-related information and were influential in shaping drug 
+users perceptions of treatment and its utility.
+*/
+
+
+/* Illicit drug users have a high prevalence of HCV */
+have_high_prevalence(illicit_drug_users,hepatitis_c_virus).
+
+
+/*and represent the majority of newly infected persons in the U.S. */
+0.6 (newly_infected_with_hepatitis_c_virus(x) & illegal_drug_user(x)).
+
+/* Despite the availability of effective HCV treatment,*/
+exists_effective_treatment_for(hepatitis_c_virus).
+
+/* few drug users have been evaluated or treated for HCV.*/
+0.2 (evaluated_for_hepatitis_c_virus(x) & illegal_drug_user(x)).
+%Replace 0.6 with actual percentage
+
+/*Racial and ethnic minorities 
+have a higher incidence and prevalence of HCV and higher HCV-related mortality. */
+0.6 (minority(x) => has_hepatitis_c_virus(x)).
+0.6 (minority(x) & has_hepatitis_c_virus(x)) => has_hepatitis_c_related_mortality(x).
+
+/*Many drug users were tested for HCV in settings where they were receiving care. */
+0.6 illicit_drug_user(x) => tested_for_hcv_where_receiving_drug_abuse_treatment(x)
+
+/* Outside of these settings, most were unaware of voluntary test sites.*/
+0.8 (illicit_drug_user(x) & ~receiving_drug_abuse_treatment(x)) => unaware_of_voluntary_hepatitis_c_virus_testing_sites(x)
+
+/* After testing HCV positive, drug users reported not receiving clear messages regarding the 
+meaning of a positive HCV test, the impact of HCV infection, or appropriate next steps including HCV 
+clinical evaluations. */
+
+0.2 (illicit_drug_user(x) & tested_positive_for_hepatitis_c_virus(x)) => understand_meaning_of_positive_test_for_hepatitis_c_virus(x).
+0.2 (illicit_drug_user(x) & tested_positive_for_hepatitis_c_virus(x)) => understand_impsvy_of_infection_with_hepatitis_c_virus(x).
+0.2 (illicit_drug_user(x) & tested_positive_for_hepatitis_c_virus(x)) => understand_next_steps_after_positive_test_for_hepatitis_c_virus(x).
+
+/* Many drug users perceived treatment as unimportant because they lacked symptoms, 
+health care providers minimized the severity of the diagnosis, or providers did not recommend treatment. */
+0.8 (illicit_drug_user(x) & tested_positive_for_hepatitis_c_virus(x) & have_no_symptoms_of_hepatitis_c_virus_infection(x))=> consider_treatment_for_hepatitis_c_virus_unimportant(x).
+0.8 (illicit_drug_user(x) & tested_positive_for_hepatitis_c_virus(x) & healthcare_providers_minimized_importance_of_hepatitis_c_virus_infection(x))=> consider_treatment_for_hepatitis_c_virus_unimportant(x).
+0.8 (illicit_drug_user(x) & tested_positive_for_hepatitis_c_virus(x) & healthcare_providers_recommended_no_treatment_of_hepatitis_c_virus(x))=> consider_treatment_for_hepatitis_c_virus_unimportant(x).
+
+0.8 (illicit_drug_user(x) * tested_positive_for_hepatitis_c_virus(x)) => mistrust_motivations_of_healthcare_wokers(x).
+0.8 illicit_drug_user(x) => learn_facts_about_hepatitis_c_virus_from_social_media(x)
+0.8 illicit_drug_user(x) => learn_attitudes_about_hepatitis_c_virus_from_social_media(x)

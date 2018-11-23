@@ -21,11 +21,11 @@ Competency Questions
 | 710        | 28  |   Yes    |
 | 515        | 17  |   Yes    |
 | 359        | 21  |   Yes    |
-| 328        | 10  |   Yes      |
-| 323        | 3   |  Yes        |
-| 254        | 11  |          |
-| 241        | 9   |          |
-| 1226       | 59  |          |
-| 1213       | 49  |          |
-| 1098       | 47  |          |
+| 328        | 10  |   Yes    |
+| 323        | 3   |  	Yes   |
+| 254        | 11  |   Yes    |
+| 241        | 9   |   Yes    |
+| 1226       | 59  |   No, the abstract describes no findings in sufficient detail    |
+| 1213       | 49  |    Yes      |
+| 1098       | 47  |    Yes      |
 | 1005       | 35  |          |
